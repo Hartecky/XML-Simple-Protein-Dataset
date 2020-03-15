@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE protein SYSTEM "protein.dtd">
+
+<protdataset>
+	<protein>
+		<nazwa>Hemoglobina łańcucha gamma-2</nazwa>
+		<nazwa>Hemoglobina</nazwa>			<!-- znacznik nazwa użyty dwa razy a wymuszone było 0 albo 1 -->
+		<organism>Homo sapiens</organism>	<!-- nie ma znaczników gen i ID które były wymagane -->
+	</protein>
+
+	<function>
+		<molecular>
+			Wiązanie hemu
+		</molecular>
+
+		<molecular>
+			Wiązanie hemoglobiny alpha
+		</molecular>
+
+		<molecular>
+			Wiązanie jonów metali
+		</molecular>
+
+		<molecular>
+			Wiązanie kwasów organicznych 
+		</molecular>
+
+		<molecular>
+			Wiązanie tlenu 
+		</molecular>
+			 
+		<molecular>
+			Aktywność nośnika tlenu
+		</molecular>
+		<biological>
+			Mechanizm krzepnięcia krwi
+		</biological>
+
+		<biological>
+			Detoksykacja utleniaczy komórkowych
+		</biological>
+		
+		<biological>
+			Proces kataboliczny nadtlenku wodoru
+		</biological>
+	</function>					
+
+	<localisation>
+		<tissue>Krew</tissue>
+		<subcell>Cytosol</subcell>
+		<subcell>Kompleks hemoglobiny</subcell>
+	</localisation>
+
+	<sequence>
+		<nucleotide>
+			ATGGGCCATTTTACCGAAGAAGATAAAGCGACCATTACCAGCCTGTGGGGCAAAGTGAAC
+			GTGGAAGATGCGGGCGGCGAAACCCTGGGCCGCCTGCTGGTGGTGTATCCGTGGACCCAG
+			CGCTTTTTTGATAGCTTTGGCAACCTGAGCAGCGCGAGCGCGATTATGGGCAACCCGAAA
+			GTGAAAGCGCATGGCAAAAAAGTGCTGACCAGCCTGGGCGATGCGATTAAACATCTGGAT
+			GATCTGAAAGGCACCTTTGCGCAGCTGAGCGAACTGCATTGCGATAAACTGCATGTGGAT
+			CCGGAAAACTTTAAACTGCTGGGCAACGTGCTGGTGACCGTGCTGGCGATTCATTTTGGC
+			AAAGAATTTACCCCGGAAGTGCAGGCGAGCTGGCAGAAAATGGTGACCGGCGTGGCGAGC
+			GCGCTGAGCAGCCGCTATCAT
+		</nucleotide>
+		<aminoacids>
+			MGHFTEEDKATITSLWGKVNVEDAGGETLGRLLVVYPWTQRFFDSFGNLSSASAIMGNPK
+			VKAHGKKVLTSLGDAIKHLDDLKGTFAQLSELHCDKLHVDPENFKLLGNVLVTVLAIHFG
+			KEFTPEVQASWQKMVTGVASALSSRYH
+		</aminoacids>
+	</sequence>
+
+	<structures>
+		<first src="first_hemoglobin.png" ></first>
+		<second src="second_hemoglobin.png" ></second>
+		<third src="third_hemoglobin.png" ></third>
+		<fourth src="fourth_hemoglobin.png"></fourth>			<!--nie posiadają elementu alt który był wymagany -->
+	</structures>
+
+</protdataset>

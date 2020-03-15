@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE protein SYSTEM "protein.dtd">
+
+<protdataset>
+	<protein>
+		<nazwa>Hemoglobina łańcucha gamma-2</nazwa>
+		<ID>P69892</ID>
+		<gene>HBG2</gene>
+		<organism>Homo sapiens</organism>
+	</protein>
+
+	<function>
+		<molecular>
+			Wiązanie hemu
+		</>
+
+		<molecular>
+			Wiązanie hemoglobiny alpha
+		</>
+
+		<molecular>
+			Wiązanie jonów metali
+		</>
+
+		<molecular>
+			Wiązanie kwasów organicznych 
+		</>
+
+		<molecular>
+			Wiązanie tlenu 
+		</>
+			 
+		<molecular>
+			Aktywność nośnika tlenu
+		</>
+		<biological>
+			Mechanizm krzepnięcia krwi
+		</>
+
+		<biological>
+			Detoksykacja utleniaczy komórkowych
+		</>
+		
+		<biological>
+			Proces kataboliczny nadtlenku wodoru
+		</>			<!-- źle pozamykane znaczniki -->
+	</function>
+
+	<localisation>
+		<tissue>Krew</tissue>
+		<subcell>Cytosol</subcell>
+		<subcell>Kompleks hemoglobiny</subcell>
+	</localisation>
+
+	<sequence>
+		<nucleotide>
+			ATGGGCCATTTTACCGAAGAAGATAAAGCGACCATTACCAGCCTGTGGGGCAAAGTGAAC
+			GTGGAAGATGCGGGCGGCGAAACCCTGGGCCGCCTGCTGGTGGTGTATCCGTGGACCCAG
+			CGCTTTTTTGATAGCTTTGGCAACCTGAGCAGCGCGAGCGCGATTATGGGCAACCCGAAA
+			GTGAAAGCGCATGGCAAAAAAGTGCTGACCAGCCTGGGCGATGCGATTAAACATCTGGAT
+			GATCTGAAAGGCACCTTTGCGCAGCTGAGCGAACTGCATTGCGATAAACTGCATGTGGAT
+			CCGGAAAACTTTAAACTGCTGGGCAACGTGCTGGTGACCGTGCTGGCGATTCATTTTGGC
+			AAAGAATTTACCCCGGAAGTGCAGGCGAGCTGGCAGAAAATGGTGACCGGCGTGGCGAGC
+			GCGCTGAGCAGCCGCTATCAT
+		</nucleotide>
+		<aminoacids>
+			MGHFTEEDKATITSLWGKVNVEDAGGETLGRLLVVYPWTQRFFDSFGNLSSASAIMGNPK
+			VKAHGKKVLTSLGDAIKHLDDLKGTFAQLSELHCDKLHVDPENFKLLGNVLVTVLAIHFG
+			KEFTPEVQASWQKMVTGVASALSSRYH
+		</aminoacids>
+	</sequence>
+
+	<structures>
+		<first src="first_hemoglobin.png" alt="first_hemoglobin_alt.png"></first>
+		<second src="second_hemoglobin.png" alt="second_hemoglobin_alt.png"></second>
+		<third src="third_hemoglobin.png" alt="third_hemoglobin_alt.png"></third>
+		<fourth src="fourth_hemoglobin.png" alt="fourth_hemoglobin_alt.png"></fourth>
+	</structures>
+
+</protdataset>

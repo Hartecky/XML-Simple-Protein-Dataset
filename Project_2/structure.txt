@@ -1,0 +1,26 @@
+Bialko
+	Nazwa
+	ID
+	Gen kodujacy
+	Organizm pochodzacy
+
+Funkcja
+	Funkcja molekularna
+	Funkcja w procesach biologicznych
+
+Lokalizacja
+	Lokalizacja tkankowa
+	Lokalizacja subkomórkowa
+		Organellum
+		Miejsce docelowe
+
+Sekwencje
+	Sekwencje nukleotydowe
+	Sekwencje aminokwasowe
+	Sekwencje homologiczne
+
+Struktury przestrzenne
+	Struktury pierwszorzedowe
+	Struktury drugorzedowe
+	Struktury trzeciorzedowe
+	Struktury czwartorzedowe

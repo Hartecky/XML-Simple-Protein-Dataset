@@ -1,0 +1,45 @@
+<!ELEMENT protdataset (protein, function, localisation, sequence, structures)>
+
+<!ELEMENT protein (nazwa?,ID?,gene+,organism*)>
+	<!ELEMENT nazwa (#PCDATA)>
+	<!ELEMENT ID (#PCDATA)>
+	<!ELEMENT gene (#PCDATA)>
+	<!ELEMENT organism (#PCDATA)>
+
+<!ELEMENT function (molecular | biological)+ >
+	<!ELEMENT molecular (#PCDATA)>
+	<!ELEMENT biological (#PCDATA)>
+
+<!ELEMENT localisation (tissue | subcell)+>
+	<!ELEMENT tissue (#PCDATA)>
+	<!ELEMENT subcell (#PCDATA)>
+
+<!ELEMENT sequence (nucleotide | aminoacids)+>
+	<!ELEMENT nucleotide (#PCDATA)>
+	<!ELEMENT aminoacids (#PCDATA)>
+
+<!ELEMENT structures (first?,second?,third?,fourth?)>
+	<!ELEMENT first EMPTY>
+		<!ATTLIST first 
+			src	CDATA	#REQUIRED
+			alt	CDATA 	#REQUIRED
+			height	CDATA 	#IMPLIED
+			width	CDATA 	#IMPLIED >
+	<!ELEMENT second EMPTY>
+		<!ATTLIST second
+			src	CDATA	#REQUIRED
+			alt	CDATA	#REQUIRED
+			height	CDATA	#IMPLIED
+			width	CDATA	#IMPLIED >
+	<!ELEMENT third EMPTY>
+		<!ATTLIST third
+			src	CDATA	#REQUIRED
+			alt	CDATA	#REQUIRED
+			height	CDATA	#IMPLIED
+			width	CDATA	#IMPLIED >
+	<!ELEMENT fourth EMPTY>
+		<!ATTLIST fourth
+			src	CDATA	#REQUIRED
+			alt	CDATA	#REQUIRED
+			height	CDATA	#IMPLIED
+			width	CDATA	#IMPLIED >
