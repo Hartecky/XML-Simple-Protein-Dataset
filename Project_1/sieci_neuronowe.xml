@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="application/xml+xhtml; charset=utf-8"/>
+		<title>Sieci neuronowe w analizie danych</title>
+		<link rel="stylesheet" href="../bhofman/style.css"> </link>
+	</head>
+	<body>
+	
+		<h1>Metody statystyczne w analizie danych</h1>
+			
+
+		<div id="menu">
+
+           <div class='topic'>
+                <a href='../kkotlarz/analiza_przezycia.xml'>Analiza przeżycia</a>
+            </div>
+
+            <div class='topic'>
+                <a href='sieci_neuronowe.xml'>Sieci neuronowe</a>
+            </div>
+
+            <div class='topic'>
+                 <a href='../blewandowski/regresja_liniowa.xml'>Regresja liniowa</a>
+            </div>
+
+          </div>
+        
+        <clear class='clear_float'/>
+
+		<div class='content'>
+
+		<h1 class='title'> 
+			Czym one są? Jak działają? Dlaczego są takie popularne? 
+		</h1>
+
+		<div id='neurony'>
+		<p>
+			Sieci neuronowe to struktury matematyczne, które poprzez przetwarzanie
+			sygnałów w postaci liczb w miejsach zwanych neuronami potrafią przyjmować
+			jedno wejście i zwracać je w sposób przekształcony, dzięki czemu możemy uzyskać
+			pewne predykcje. Czasem nazwą sztuczne sieci neuronowe określa się interdyscyplinarną
+			dziedzinę wiedzy zajmującą się konstrukcją, trenowaniem i badaniem możliwości tego rodzaju sieci. 
+		</p>
+		</div>
+
+		<img id="neuron_img" src="d.png" alt="DL"/>
+
+		</div>
+
+		<div class='content'>
+			
+		<h2>Krótka historia</h2>
+		<div class='content'>
+		<p>
+			Sieci neuronowe są wzorowane na faktycznych połączeniach komórek układu nerwowego, czy
+			całych mechanizmów działania mózgu. Gdy po raz pierwszy przedstawiono matematyczny model
+			komórki nerwowej, powiązano go z problemem przetwarzania danych. Pierwsze sieci neuronowe
+			zostały zbudowane w latach 50. 
+		</p>
+		</div>
+		<img id='content' src="dd.png" alt="Deep Learning"/>
+
+		</div>
+
+		<div class='content'>
+		<h2>Jak działają sieci neuronowe?</h2>
+
+		<div class='neurony_schemat'>
+		<p>
+			Sieć neuronowa ma kilka wejść, do każdego z nich są przypisane wagi, które określają, jak duży wpływ
+			na wynik ma dane wejście. Następnie w zależności od wybranych operacji matematycznych sygnał jest przekazywany dalej
+			do kolejnych neuronów. Warto wspomnieć jeszcze o obecności funkcji która dynamicznie zmienia i dostosowuje wagi
+			w poszukiwaniu najbardziej optymalnego rozwiązania.
+		</p>
+		</div>
+
+		<img class='neurony_schemat' src="neurony.png" alt="neurony"/>
+
+		</div>
+
+		<clear class='clear_float'></clear>
+
+		<div class='content'>
+		<h2>Dotychczasowe osiągnięcia użycia sieci neuronowych</h2>
+
+		<p>
+			Machine Learning oraz Deep Learning, czyli uczenia wykorzystujące sieci neuronowe bardzo dynamicznie się rozwijają
+			w dzisiejszych czasach i zapewne czeka nas wiele osiągnięć tych mechanizmów. Na dzień dzisiejszy możemy im zawdzięczyć
+			wynalazki takie jak autopilot, rozpoznawanie mowy, rozpoznawanie pisma, rozpoznawanie defektów samochodów na ulicy
+			(np. zepsute światło) i kierowanie informacji zwrotnej od razu do kierowcy. Google tłumacz także korzysta z deep learningowych
+			sieci i cały czas się uczy jak najlepszych tłumaczeń.
+		</p>
+
+		<img class='content' src="tesla.png" alt="tesla_autopilot"/>
+		</div>
+
+		<div class='content'>
+		<h2>Jak możemy klasyfikować sieci neuronowe?</h2>
+		<div class='klasyfikatory'>
+		<p>
+			Topologia – począwszy od prostych sieci z małą liczbą warstw przekazujących informacje w jednym kierunku aż do wielowarstwowych sieci ze sprzężeniem zwrotnym. Sieć szersza (z większą liczbą neuronów w warstwie wejściowej) może obserwować więcej danych. Głębsza sieć (z większą liczbą warstw) ma większy potencjał wykrywania wysokopoziomowych zależności i abstrakcji w danych wejściowych.
+		</p>
+		</div>
+
+		<div class='klasyfikatory'>
+		<p>
+			Metody działania – sieci mogą mieć różny stopień wewnętrznej dynamiki, czyli przekazywania danych pomiędzy warstwami ukrytymi i stopniowego dochodzenia do wyniku. Wielopoziomowe sieci rekurencyjne mają „dłuższą pamięć” – jeden zestaw danych może przechodzić tok wyuczonego postępowania w bardzo wielu etapach, a pośrednie wnioski można odnosić do siebie nawzajem.
+		</p>
+		</div>
+
+		<div class='klasyfikatory'>
+		<p>
+			Metody uczenia – sieci mogą być uczone pod nadzorem (dążyć do zadanego wyniku) lub bez nadzoru (dążyć do wykrycia nieznanych zależności). Oprócz tego różnią się tym, czy w trakcie uczenia sieci była wykorzystywana rekurencja, jak długo sieć dążyła do optymalnego wyniku albo jak bardzo jest dopasowana do konkretnego zestawu danych wejściowych.
+		</p>
+		</div>
+		</div>
+
+	
+	</body>
+</html>

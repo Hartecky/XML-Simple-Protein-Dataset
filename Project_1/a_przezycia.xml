@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="application/xml+xhtml; charset=utf-8"/>
+        <title>Analiza przeżycia</title>
+        <link rel="stylesheet" href="../bhofman/style.css"> </link>
+    </head>
+    <body>
+
+        <h1>Metody statystyczne w analizie danych</h1>
+
+        <div id="menu">
+
+            <div class='topic'>
+                <a href='analiza_przezycia.xml'>Analiza przeżycia</a>
+            </div>
+
+            <div class='topic'>
+                <a href='../rstepien/sieci_neuronowe.xml'>Sieci neuronowe</a>
+            </div>
+
+            <div class='topic'>
+                 <a href='../blewandowski/regresja_liniowa.xml'>Regresja liniowa</a>
+            </div>
+
+        </div>
+
+        <clear class='clear_float'/>
+
+        <div class='content'>
+
+        <h1 class="title">Analiza przeżycia</h1>
+        <h2>Wprowadzenie</h2>
+        <div class='intro'>
+        <p>
+            W zdecydowanej większości badań o tematyce onkologicznej najbardziej interesującym zagadnieniem jest to, czy
+            badany schemat leczenia jest lepszy od standardowego lub placebo. Aby to ocenić, należy porównać między sobą badane
+            grupy pod względem czasu do wystąpienia pewnego zdarzenia (którym najczęściej jest zgon, lecz może być to też
+            innego rodzaju punkt końcowy).
+        </p>
+        </div>
+
+        <div class='intro'>
+        <p>
+            W onkologii — klinicysta nigdy nie ma pewności co do doszczętności wyleczenia choroby nowotworowej, a brak
+            potwierdzonej
+            wznowy może wynikać zarówno ze skutecznego leczenia, jak i zbyt krótkiego czasu obserwacji. Ta niepewność
+            dotycząca
+            losu pacjenta i ograniczone czasowo okno obserwacji wymuszają stosowanie specjalnych technik analizy
+            statystycznej
+            dopuszczających niepewność w zakresie wystąpienia efektu końcowego.
+        </p>
+        </div>
+
+        <clear class='clear_float'/>
+        
+        </div>
+
+        <div class="content">
+
+        <h3>Tablice trwania życia</h3>
+
+        <div id='trwanie_zycia'>
+        <p>
+            Najstarszym, lecz ciągle aktualnym sposobem opisywania czasów przeżycia są tablice trwania życia. Dzięki nim
+            można najprościej opisać przeżycie w próbie. Narzędzie to wykorzystuje się w badaniu procesów migracyjnych i
+            edukacyjnych, ale również w firmach zajmujących się ubezpieczeniami na życie. Konstrukcja tablicy przeżycia
+            opiera się na podziale czasu trwania obserwacji na przedziały klasowe o równej rozpiętości. Dla każdego z
+            nich
+            można obliczyć liczbę i proporcję pacjentów ciągle żyjących, poza obserwacją lub zmarłych.
+        </p>
+        </div>
+
+            <img id='obs' src="1.svg" alt="Cenzurowanie danych"/>
+
+        <div id='info'>
+        <ol>
+            <li>Informacja kompletna</li>
+            <li>
+                Dla części obserwacji w tym okresie nie zaobserwuje się szukanego zdarzenia. Wiadomo jednak, że to
+                zdarzenie nastąpi kiedyś w przyszłości. Mówimy wtedy o&nbsp;cenzurowaniu prawostronnym
+            </li>
+            <li>
+                Cenzurowanie lewostronne ma miejsce wtedy, gdy wiemy, że dane zdarzenie zaobserwowano wcześniej, lecz
+                nie wiemy dokładnie kiedy.
+            </li>
+        </ol>
+        </div>
+
+        </div>
+
+        <clear class='clear_float'/>
+
+        <div class='content'>
+
+        <h3>Cenzurowanie</h3>
+
+        <p>
+            Poważnym problemem, który napotyka się w tego typu analizach jest cenzurowanie danych. Dla części obserwacji w tym okresie nie zaobserwuje się szukanego zdarzenia. Wiadomo jednak, że to zdarzenie nastąpi kiedyś w przyszłości. Mówimy wtedy o cenzurowaniu prawostronnym. Cenzurowanie lewostronne ma miejsce wtedy, gdy wiemy, że dane zdarzenie zaobserwowano wcześniej, lecz nie wiemy dokładnie kiedy.
+        </p>
+        </div>
+
+
+        <div id="przezycie_ryzyko">
+        <h3>Prawdopodobieństwo przeżycia i ryzyka</h3>
+        <div id='list'>
+        <ul>
+            <li>Prawdopodobieństwo przeżycia
+                <ol>
+                    <li>Prawdopodobieństwo, że osoba przeżyje dłużej niż pewien przyjęty czas t czyli dożyła co
+                        najmniej do czasu t
+                    </li>
+                    <li>Dostarcza informacji od momentu rekrutacji do zakończenia obserwacji</li>
+                    <li>Brak konieczności grupowania</li>
+                </ol>
+            </li>
+
+            <br/>
+
+            <li>Ryzyko zgonu (hazard)
+                <ol>
+                    <li>Przeciwieństwo funkcji przeżycia</li>
+                    <li>Chwilowy potencjał pojawiającego się zdarzenia pod warunkiem, że osoba dożyła do czasu t</li>
+                    <li>Jest to równe ryzyku śmierci na jakie narażone są osoby, które dożyły do chwili t</li>
+                </ol>
+            </li>
+        </ul>
+        </div>
+
+        <h3>Hazard względny</h3>
+
+        <img id='hazard' src="2.svg" alt="Hazard" align="middle"/>
+        <div id='iloraz_hazardu'>
+        <p>
+            Wyliczany z ilorazu hazardu w grupie badanej względem porównawczej przyjmuje teoretycznie wartości od 0
+            (interwencja całkowicie zapobiega wystąpieniu punktu końcowego) do nieskończoności (interwencja zwiększa
+            w największym możliwym stopniu prawdopodobieństwo wystąpienia punktu końcowego). Wartość 1 HR odpowiada
+            interwencji idealnie neutralnej — zarówno w grupie badanej, jak i kontrolnej hazard punktu końcowego
+            jest identyczny.
+        </p>
+        </div><clear class='clear_float'/>
+        </div>
+
+        
+
+        <div class='content'>
+        
+        <h2>Metoda kaplana-Meiera</h2>
+        
+        <p>
+            Wykorzystuje założenia, zgodnie z którymi chory, aby przeżyć 1 rok w badaniu, musi przeżyć wszystkie
+            poprzednie okresy (miesiące po miesiącu) i nie może u niego wystąpić punkt końcowy
+        </p>
+
+        <a href="https://www.codecogs.com/latex/about.php"><img class='wzory' src="http://latex.codecogs.com/gif.latex?t_%7Bn_1%7D%20%3C%20t_2%20%3C%20t_3%20%3C%20%5Cldots%20%3C%20T_N"
+            alt="Metoda kaplana-Meiera_1"/></a>
+
+        <br></br>
+
+        <a href="https://www.codecogs.com/latex/about.php"><img class='wzory' src="http://latex.codecogs.com/gif.latex?%5Chat%7BS%7D_%7B%28t%29%7D%3D%5Cprod%5Climits_%7Bt_i%20%3C%20t%7D%20%5Cleft%281%20-%5Cfrac%7Bd_i%7D%7Bn_i%7D%5Cright%29"
+            alt="Metoda kaplana-Meiera_2"/></a>
+
+        </div>
+
+        <div id='weryfikacja_hipotez'>
+        <h3>Weryfikacja hipotez w analizie przeżycia</h3>
+
+        <div id='HR'>
+        <p>
+            Jeśli porównuje się jedynie dwie grupy, można obliczyć szacowane HR:
+        </p>
+
+        <a href="https://www.codecogs.com/latex/about.php">
+            <img id='hr' src="http://latex.codecogs.com/gif.latex?HR%3D%5Cfrac%7BO_1/E_1%7D%7BO_2/E_2%7D"
+            alt="Weryfikacja hipotez w analizie przeżycia"/></a>
+        </div>
+
+        <div id='porownanie'>
+        <p>
+            Do porównania 2 lub więcej grup wykorzystuje się test log-rank; Test log-rank porównuje ze sobą 2 lub więcej
+            krzywych przeżycia i bazuje na logarytmie funkcji przeżycia. Oblicza w każdym momencie czasu dla każdej
+            grupy liczbę punktów końcowych, które wystąpiłyby, jeśli nie byłoby różnic pomiędzy grupami pod względem
+            liczby pojawienia się tych punktów.
+        </p>
+        </div>
+        </div>
+
+        <clear class='clear_float'/>
+
+        <div class='content'>
+        <h2>Model proporcjonalnego ryzyka Coxa</h2>
+
+        <a href="https://www.codecogs.com/latex/about.php"><img class='wzory' src="http://latex.codecogs.com/gif.latex?h_%7B%28t%29%7D%3Dh_%7B0%28t%29%7Dexp%5Cleft%5C%7B%20b_1%20x_1&plus;b_2%20x_2&plus;%5Ccdots%20&plus;b_p%20x_p%20%5Cright%5C%7D"
+            alt="Model proporcjonalnego ryzyka Coxa"/></a>
+
+        <p>
+            Pozwala na opisanie krzywej przeżycia (funkcji hazardu) za pomocą zmiennych objaśniających jakościowych i
+            ilościowych. Jednocześnie wśród części zmiennych istnieje tendencja wzajemnych powiązań (np. zajęcie węzłów
+            chłonnych i obecność przerzutów odległych). Aby rozdzielić analitycznie efekt poszczególnych czynników,
+            wykorzystuje się techniki analizy wielowymiarowej zwane potocznie modelami.
+        </p>
+        </div>
+
+        <div class='content'>
+        <h2>Inne techniki wieloczynnikowej analizy przeżycia</h2>
+
+        <table >
+            <tr>
+                <th class='tab'>Sieci neuronowe</th>
+                <th class='tab'>Drzewka decyzyjne</th>
+            </tr>
+            <tr>
+                <td>
+                    Wykorzystanie samoadaptujących sie neuronów
+                </td>
+
+                <td>
+                    Polega na dzieleniu grupy badanej na podgrupy na podstawie zmiennych o największym potencjale
+                    dyskryminacyjnym
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Brak możliwości określenia indywidualnego efektu poszczególnych zmiennych
+                </td>
+                <td>
+                    Wybór zmiennej dychotomizującej jest przeprowadzany na każdym kolejnym poziomie drzewa
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    „Czarne skrzynki” — wewnętrzne działanie jest nieprzeniknione dla osoby oceniającej efekt ich prac
+                </td>
+                <td>
+                    Łatwość interpretacji i zastosowania praktycznego
+                </td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>

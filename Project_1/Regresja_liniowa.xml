@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html 
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="application/xml+xhtml; charset=utf-8"/>
+  <title>Regresja liniowa</title>
+  <link rel="stylesheet" href="../bhofman/style.css"> </link></head>
+<body>   
+        <h1>Metody statystyczne w analizie danych</h1>
+
+        <div id="menu">
+
+            <div class='topic'>
+                <a href='../kkotlarz/analiza_przezycia.xml'>Analiza przeżycia</a>            
+                </div>
+
+            <div class='topic'>
+               <a href='../rstepien/sieci_neuronowe.xml'>Sieci neuronowe</a>
+            </div>
+
+            <div class='topic'>
+                <a href='regresja_liniowa.xml'>Regresja liniowa</a>
+            </div>
+
+            <br></br>
+        </div>
+
+    <clear class='clear_float'/>
+
+    <div class='content'>
+
+    <h2 class='title'> 
+      Wprowadzenie 
+    </h2>
+
+    <p>
+      Regresja liniowa jest metodą statystyczną stosowaną do predykcji wyników. Poprzez prostą funkcję liniową
+      dopasowujemy model do danych. Stosowana jest ona głównie w analizie danych, może być wykorzystywana jako 
+      pojedyńczy test jak i część bardziej rozbudowanych analiz. Przedstawię tutaj bardzo prosty model i przykład jej zastosowania.
+      Jest ona również wykorzystywana przy sieciach neuronowych, czy w analizie przeżycia, czy nawet jako prosta metoda radzenia sobie z brakiem danych.
+      Poprzez regresję liniową i predykcję możemy przewidzieć jakie dane powinny się znaleźć w miejscach, gdzie ich nie ma.
+    </p>
+    </div>
+
+    <div class='content'>
+      
+    <h2>Model regresji liniowej</h2>
+    <p>
+
+      Model prostej regresji liniowej można przestawić wzorem:
+    
+      <img class ='wzor' src="wzor.png" alt="Wzór na prostą regresję liniową"/>
+      
+      Chociaż regresja liniowa zależnie od przeprowadzanej analizy może ten wzór mieć delikatnie różniący się i specyfinczy dla danej sytuacji.
+      Teraz postarajmy się rozumieć o czym mówi nam ten dziwny, ale jakże ciekawy wzór przedstawiony wyżej.
+    </p>
+
+    <div class='wzory'>
+    <p>
+        <var>y</var> - jest to zmienna zależna/objaśniana, inaczej mówiąc jest to nasza predykcja danej zmiennej
+    </p>
+    </div>
+
+    <div class='wzory'>
+    <p>
+        <var>x</var> - jest to zmienna objaśniająca, od niej zależy głównie wynik naszego <var>y</var>
+
+    </p>
+    </div>
+
+    <div class='wzory'>
+    <p>
+        <var>a</var> i <var>B</var> - są to stałe
+    </p>
+    </div>
+    <div class='wzory'>
+    <p>
+        <var>e</var> - jest to współczynnik błędu, dążymy do tego, żeby był jak najmniejszy 
+    </p>
+    </div>
+
+    </div>
+
+    <div class='content'>
+      <img class = 'wzor' src="regresja.png" alt="regresja liniowa"/>
+    </div>
+
+    <div class='podpisy'>
+        Wykres przedstawiający zależność zużycia paliwa od objętości skokowej silnika
+    </div>
+
+    <div class='content'>
+      <h2>
+        Wybieranie wartości <var>alfa</var> i <var>beta</var>, czyli metoda najmniejszych kwadratów
+      </h2>
+
+    <p>
+       Nazwa „najmniejsze kwadraty” oznacza, że końcowe rozwiązanie tą metodą minimalizuje sumę kwadratów błędów przy rozwiązywaniu każdego z równań.
+       Oznacza to, że mając 2 punkty na wykresie, ich odległość podniesiona do kwadratu ma być jak najniższa i tak obliczamy dla wszystkich punktów na wykresie, czyli dla każdej wartości zmiennej objaśnianej.
+       Metoda ta jest najstarsza i najłatwiejsza do zastosowania, choć posiada wady (np. niewielką odporność na elementy odstające), które udało się usunąć w innych, mniej rozpropagowanych metodach. Są to np. odporne metody statystyczne (ang. robust methods), do których należy m.in. regresja medianowa, i algorytmy z regularyzacją.
+    </p>
+    </div>
+    <div class='content'>
+
+    <h2>Kwartet Anscombe'a</h2>
+
+      <img class='kod' src="kwartet.png" alt="kwartek Anscombea"/>
+
+    <div class='podpisy'>
+          Author: Anscombe.svg: Schutz
+    </div>
+
+    <p>
+      Przedstawia to idealnie, że mimo że zbiór danych jest kompletnie inny, to model regresji jest za każdym razem taki sam. 
+      Idealnie odzwierciedla to niedoskonałość i prostotę metod pokazanych wyżej. 
+    </p>
+
+    </div>
+
+    <div class='content'>
+
+    <h2>Przykład regresji w Pythonie</h2>
+
+    <p>
+      Badamy zależność pomiędzy liczbą znajomych użytkownika pewnego serwisu społecznościowego, a ilością czasu spędzonego przez niego codziennie na tej stronie.
+      Zakładamy, że posiadanie więcej znajomych sprawia, iż użytkownik spędza więcej czasu na platformie.
+      W naszym przykładzie jak byśmy chcieli opisać model to zmienną <var>y</var> jest liczba minut spędzonych na stronie przez użytkownika <var>i</var>, a <var>x_i</var> jest liczbą przyjaciół użytkownika <var>i</var>.
+    </p>
+
+      <div class='content'>
+        <img class = 'kod' src="kod.png" alt="Kod python"/>
+      </div>
+
+      <div class='podpisy'>
+            Źródło: <var>Data Science od Podstaw</var>, Joel Grus
+      </div>
+
+      <div class='content'>
+      <p>
+        Kod przedstawiony wyżej jest to kod, który za pomocą metody najmniejszych kwadratów ustala wartości <var>alpha</var> i <var>beta</var> minimalizując przy tym współczynnik błędu.
+        W ten sposób uzyskamy następujące wartości współczynników <var>alpha</var> = 22,95 i <var>beta</var> = 0,903. 
+        To mówi nam, że użytkownik posiadający <var>n</var> znajomych spędza dziennie 22,95 + <var>n</var> * 0,903 minut na danym serwisie społecznościowym.
+        Możemy sprawdzić, czy nasza regresja pokrywa się z wynikami dobrze, średnio czy raczej źle poprzez współczynnik R<sup>2</sup>. 
+        Przyjmuje on wartości od 0 do 1, przy czym 1 jest to najlepsze dopasowanie, a 0 mówi nam o bardzo słabym przypasowaniu.
+        </p>
+      </div>
+
+      <div id='kod_python_2'>
+        <img class= 'kod' src="kod2.png" alt="Kod python"/>
+      </div>
+
+      <div class='podpisy'>
+            Źródło: <var>Data Science od Podstaw</var>, Joel Grus
+      </div>
+    <p>
+      Kod który ustala wartość współczynnika R<sup>2</sup>.
+      W naszym przypadku wynosi o 0,33 co świadczy o średnim przypasowaniu.
+    </p>
+    </div>
+</body>
+
+</html>

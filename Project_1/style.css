@@ -1,0 +1,174 @@
+body{
+	margin-right: auto;
+	margin-left: auto;
+}
+h1, h2, h3{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+h1{
+	border-bottom: 2px solid;
+}
+h3{
+	margin-top: 30px;
+}
+a{
+	text-decoration: none;
+}
+#menu{
+	width: 600px;
+	margin-left:auto;
+	margin-right: auto;
+}
+.title{
+	border-bottom: 2px dashed;
+	padding-bottom: 6px;
+}
+.content{
+	width: 860px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: justify;
+}
+.topic{
+	width: 180px;
+	height: 90px;
+	font-style: oblique;
+	font-family: sans-serif;
+	text-align: center;
+	position: sticky;
+	display: inline-block;
+}
+.intro{
+	width: 400px;
+	height: 250px;
+	margin-left: 12px;
+	margin-right:12px;
+	display: inline-grid;
+}
+#trwanie_zycia{
+	width: 300px;
+	margin-left: 8px;
+	margin-right: 8px;
+	height: 300px;
+	float: left;
+}
+#obs{
+	width: 300px;
+	height: 300px;
+	margin-top: 30px;
+}
+#info{
+	width: 244px;
+	float: right;
+}
+#przezycie_ryzyko{
+	width: 860px;
+	height: 510px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+}
+#list{
+	width: 300px;
+	float: left;
+}
+#hazard{
+	width: 300px;
+	height: 200px;
+	margin-left: 120px;
+	margin-right: 120px;
+	display: inline-grid;
+}
+#iloraz_hazardu{
+	width: 450px;
+	height: 250px;
+	margin-left: 50px;
+	margin-right: 50px;
+	display: inline-grid;
+}
+.wzory{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+#weryfikacja_hipotez{
+	width: 860px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+}
+#HR{
+	width: 300px;
+	padding-left: 40px;
+	display: inline-grid;
+}
+#hr{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#porownanie{
+	width: 440px;
+	margin-left: 60px;
+	margin-right: 0px;
+	display: inline-grid;
+}
+.tab{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+	width: 860px;
+}
+#neurony{
+	text-align: justify;
+	width: 300px;
+	margin-right: 10px;
+	margin-left: 10px;
+	display: inline-block;
+}
+#neuron_img{
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 10px;
+	width: 400px;
+}
+.neurony_schemat{
+	width: 400px;
+	margin-left: 20px;
+	float: left;
+}
+.klasyfikatory{
+	width: 265px;
+	height: 300px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+}
+.wzor{
+	height: 30%;
+	width: 30%;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.kod{
+	height: 70%;
+	width: 70%;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.podpisy{
+	text-align: center;
+}
+.clear_float{
+	clear: both;
+}
